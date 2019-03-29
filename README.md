@@ -55,6 +55,6 @@ dependencies {
     <com.bangtiray.material.pager.lib.BTBVPager
             android:id="@+id/mainPage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></com.bangtiray.material.pager.lib.BTBVPager>
+            android:layout_height="match_parent"/>
 </LinearLayout>
 ```
