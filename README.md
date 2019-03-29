@@ -1,4 +1,4 @@
-# btbvpager (BT = Bored [in indonesia] B = Bikin / Making vpager = ViewPager)
+# btbvpager (BT = Bored, B = Bikin / Making, vpager = ViewPager)
 btbvpager Make viewpager quickly for those of you who are tired of making adapters
 
 [![](https://jitpack.io/v/bangtiray/btbvpager.svg)](https://jitpack.io/#bangtiray/btbvpager) 
