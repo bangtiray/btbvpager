@@ -16,7 +16,9 @@ allprojects {
 Step 2. Add the dependency
 ```gradle
 dependencies {
+
 	        implementation 'com.github.bangtiray:btbvpager:1.0.0'
+implementation "com.google.android.material:material:$support_version"
 	}
 ```
 ## Support AndroidX
