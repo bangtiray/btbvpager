@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 ```
 # overview
 This library 
-has been there before, but hasn't used the Android version yet
+has been there before, but hasn't used the AndroidX version yet
 
 refer library belonging to Alfianyusufabdullah
 https://github.com/alfianyusufabdullah/spager
