@@ -16,7 +16,7 @@ allprojects {
 Step 2. Add the dependency
 ```gradle
 dependencies {
-	        implementation 'com.github.bangtiray:btbvpager:Tag'
+	        implementation 'com.github.bangtiray:btbvpager:1.0.0'
 	}
 ```
 ## Support AndroidX
@@ -58,3 +58,45 @@ dependencies {
             android:layout_height="match_parent"/>
 </LinearLayout>
 ```
+## Starting Code
+
+in kotlin you just add this on your Activity or Fragment
+```kotlin
+import kotlinx.android.synthetic.main.activity_main.*
+    
+mainToolbar.title = "BTBVPager"
+mainPage.init {
+    addPages("One" , PageOne())
+    addPages("Two" , PageTwo())
+    addPages("Three" , PageThree())
+}
+```
+and if you wanna add TabLayout just like this
+```kotlin
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
+    
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        mainToolbar.title = "BTBVPager"
+
+        mainPage.init(mainTabLayout) {
+            addPages("One", OneFragment())
+            addPages("Two", TwoFragment())
+            addPages("Three", ThreeFragment())
+        }
+    }
+}
+```
+# overview
+This library 
+has been there before, but hasn't used the Android version yet
+
+refer library belonging to Alfianyusufabdullah
+https://github.com/alfianyusufabdullah/spager
+
+Thanks Alfianyusufabdullah Allah Bless you!!! :tada: :tada:
+
