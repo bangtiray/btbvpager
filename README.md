@@ -62,17 +62,6 @@ dependencies {
 
 in kotlin you just add this on your Activity or Fragment
 ```kotlin
-import kotlinx.android.synthetic.main.activity_main.*
-    
-mainToolbar.title = "BTBVPager"
-mainPage.init {
-    addPages("One" , PageOne())
-    addPages("Two" , PageTwo())
-    addPages("Three" , PageThree())
-}
-```
-and if you wanna add TabLayout just like this
-```kotlin
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
     
