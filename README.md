@@ -1,5 +1,5 @@
-# AndroidX Fast View Pager library (BT=Bored, B=Bikin/Making,vpager=ViewPager) 
-btbvpager Make viewpager quickly for those of you who are tired of making adapters
+# Android WebViewHelper Help you to show website on Webview
+
 
 [![](https://jitpack.io/v/bangtiray/btbvpager.svg)](https://jitpack.io/#bangtiray/btbvpager) 
 
@@ -16,79 +16,24 @@ allprojects {
 Step 2. Add the dependency
 ```gradle
 dependencies {
-    implementation 'com.github.bangtiray:btbvpager:1.0.0'
-    //add material
-    implementation "com.google.android.material:material:$support_version"
+      implementation 'com.github.bangtiray:WebViewHelper:Tag'
 }
 ```
-## Support AndroidX
-```gradle
-    implementation 'androidx.appcompat:appcompat:$support_version'
-```    
-## Create Layout
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <androidx.appcompat.widget.Toolbar
-                android:id="@+id/mainToolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        <com.google.android.material.tabs.TabLayout
-                android:id="@+id/mainTabLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabTextColor="#fff"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-    <com.bangtiray.material.pager.lib.BTBVPager
-            android:id="@+id/mainPage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-</LinearLayout>
-```
 ## Starting Code
 
 in kotlin you just add this on your Activity or Fragment
 ```kotlin
-import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-    
-class MainActivity : AppCompatActivity() {
-
+    private lateinit var myText:EditText
+    private lateinit var myButton:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mainToolbar.title = "BTBVPager"
 
-        mainPage.init(mainTabLayout) {
-            addPages("One", OneFragment())
-            addPages("Two", TwoFragment())
-            addPages("Three", ThreeFragment())
+        myText=findViewById(R.id.textUrl)
+        myButton=findViewById(R.id.btnWebview)
+        myButton.setOnClickListener {
+            Bangtiray.showWebView(applicationContext, myText.text.toString(), "", false)
         }
     }
-}
 ```
-# overview
-This library 
-has been there before, but hasn't used the AndroidX version yet
-
-refer library belonging to Alfianyusufabdullah
-https://github.com/alfianyusufabdullah/spager
-Thanks Alfianyusufabdullah Allah Bless you!!! :tada: :tada:
-
-![alt text](https://avatars2.githubusercontent.com/u/22283409?s=200&v=4)
-
